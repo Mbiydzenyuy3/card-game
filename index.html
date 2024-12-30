@@ -9,20 +9,25 @@
 </head>
 
 <body>
-  <h1>Memory Card Game</h1>
-  <div class="controls">
-    <button id="start">Start Game</button>
-    <button id="restart">Restart</button>
-    <select id="difficulty">
-      <option value="easy">Easy (4x4)</option>
-      <option value="medium">Medium (6x6)</option>
-    </select>
+  <div class="container">
+    <h1>Memory Card Game</h1>
+    <div class="game-features">
+      <div class="controls">
+        <button id="start">Start Game</button>
+        <button id="restart">Restart</button>
+        <select id="difficulty">
+          <option value="easy">Easy (4x4)</option>
+          <option value="medium">Medium (6x6)</option>
+        </select>
+      </div>
+      <div id="stats">
+        <p>Time: <span id="timer">00:00</span></p>
+        <p>Score: <span id="score">0</span></p>
+      </div>
+    </div>
+    <div class="game-board"></div>
   </div>
-  <div id="stats">
-    <p>Time: <span id="timer">00:00</span></p>
-    <p>Score: <span id="score">0</span></p>
-  </div>
-  <div class="game-board"></div>
+
   <script src="./javascript/script.js"></script>
 </body>
 
