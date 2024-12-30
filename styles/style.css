@@ -8,27 +8,75 @@ body {
   font-family: Arial, sans-serif;
   display: flex;
   flex-direction: column;
+  gap: 32px;
   align-items: center;
-  background-color: #f0f0f0;
+  background-color: #0e0e0e;
+  min-width: 100vw;
+  min-height: 100vh;
+  color: #fff;
+
+}
+
+h1 {
+  text-align: center;
+  font-size: 1.1rem;
+  margin: 3rem 0 0 0;
+  color: #fff;
+}
+
+.container {
+  width: min(1200px, 100%);
+  /* margin: auto; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#difficulty-levels {
+  width: 18vw;
+  padding-inline: 0.2em;
+  outline: none;
+  margin-right: 15px;
+  border: 0;
+  color: #fff;
+  background-color: transparent;
+}
+
+#timer {
+  color: #fcfc04;
+  font-weight: 700;
+}
+
+#stats {
+  padding-block: 1rem;
+  text-align: center;
+}
+
+#game-wrapper {
+  width: min(1200px, 98%);
+  margin: 0 auto;
 }
 
 .game-board {
   display: grid;
+  justify-content: center;
   gap: 10px;
   margin-bottom: 20px;
+  place-content: center;
 }
 
 .card {
-  width: 100px;
-  height: 100px;
-  background-color: #ddd;
+  width: 6.25rem;
+  height: 6.25rem;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 24px;
+  border-radius: 8px;
   cursor: pointer;
   transition: transform 0.6s;
   transform-style: preserve-3d;
+  overflow: hidden;
 }
 
 .card.flipped {
@@ -47,21 +95,51 @@ body {
 }
 
 .card-front {
-  background-color: #2980b9;
+  background-color: #fff;
+  border-radius: 24px;
   transform: rotateY(180deg);
 }
 
 .card-back {
-  background-color: #3498db;
+  background-image: url("/assets/pattern_jigs.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .controls {
-  margin-bottom: 20px;
+  display: flex;
 }
 
 button {
-  margin: 0 10px;
-  padding: 10px 20px;
+  margin: 0 5px;
+  padding: 8px 16px;
   font-size: 16px;
   cursor: pointer;
+  border-radius: 8px;
+  border: 0;
+}
+
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .game-features {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+  }
+
+  .controls {
+    display: flex;
+    flex-direction: column;
+  }
 }

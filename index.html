@@ -9,13 +9,13 @@
 </head>
 
 <body>
+  <h1>Memory Card Game</h1>
   <div class="container">
-    <h1>Memory Card Game</h1>
     <div class="game-features">
       <div class="controls">
         <button id="start">Start Game</button>
         <button id="restart">Restart</button>
-        <select id="difficulty">
+        <select id="difficulty-levels">
           <option value="easy">Easy (4x4)</option>
           <option value="medium">Medium (6x6)</option>
         </select>
@@ -25,7 +25,10 @@
         <p>Score: <span id="score">0</span></p>
       </div>
     </div>
-    <div class="game-board"></div>
+    <div id="game-wrapper">
+      <div class="game-board"></div>
+    </div>
+
   </div>
 
   <script src="./javascript/script.js"></script>

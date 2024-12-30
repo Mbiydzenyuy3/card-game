@@ -51,7 +51,6 @@ function createGameBoard(size) {
 
     const cardBack = document.createElement("div");
     cardBack.classList.add("card-back");
-    cardBack.textContent = "?";
 
     cardElement.appendChild(cardFront);
     cardElement.appendChild(cardBack);
