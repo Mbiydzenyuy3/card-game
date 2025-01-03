@@ -138,9 +138,7 @@ function startTimer() {
 function endGame() {
   clearInterval(timer);
   gameStarted = false;
-  alert(
-    `Congratulations! You completed the game in ${timerElement.textContent} with ${score} matches.`
-  );
+  return `Congratulations! You completed the game in ${timerElement.textContent} with ${score} matches.`;
 }
 
 startButton.addEventListener("click", startGame);
