@@ -14,19 +14,14 @@ body {
   min-width: 100vw;
   min-height: 100vh;
   color: #fff;
-  overflow-x: hidden;
 
 }
 
 h1 {
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.1rem;
   margin: 3rem 0 0 0;
   color: #fff;
-}
-
-.heading-color {
-  color: #fcfc04;
 }
 
 .container {
@@ -82,6 +77,7 @@ h1 {
   transition: transform 0.6s;
   transform-style: preserve-3d;
   overflow: hidden;
+  /* background-color: aqua; */
 }
 
 .card.flipped {
@@ -100,41 +96,29 @@ h1 {
 }
 
 .card-front {
-  background-color: #fff;
+  /* background-color: #fff; */
   border-radius: 24px;
+  z-index: 2;
   transform: rotateY(180deg);
+
 }
 
 .card-back {
-  background-image: url("/assets/pattern_jigs.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.game-features {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  align-items: center;
+  /* background-color: aqua; */
+  z-index: 1;
 }
 
 .controls {
   display: flex;
-  gap: 8px;
-  align-items: center;
 }
 
 button {
   margin: 0 5px;
-  padding: 16px;
+  padding: 8px 16px;
   font-size: 16px;
   cursor: pointer;
   border-radius: 8px;
-  border: 1px solid #fcfc04;
-  width: 8em;
-  background-color: transparent;
-  color: #fff;
+  border: 0;
 }
 
 @media (min-width: 1024px) {

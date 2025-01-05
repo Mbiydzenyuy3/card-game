@@ -3,16 +3,17 @@ const scoreElement = document.getElementById("score");
 const timerElement = document.getElementById("timer");
 const startButton = document.getElementById("start");
 const restartButton = document.getElementById("restart");
-const difficultySelect = document.getElementById("difficulty");
+const difficultySelect = document.getElementById("difficulty-level");
 
 let cards = [];
 let flippedCards = [];
 let score = 0;
 let timer;
 let seconds = 0;
+let attempts = 0;
 let gameStarted = false;
 
-const emojis = ["🐶", "🐱", "🐭", "🐹", "🐰", "🦊", "🐻", "🐼"];
+const emojis = ["🍎", "🍌", "🍇", "🍓", "🍒", "🍍", "🥝", "🍑"];
 
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
@@ -72,12 +73,17 @@ function flipCard() {
     flippedCards.push(this);
 
     if (flippedCards.length === 2) {
+      attempts++; // Increment attempt count
+      updateAttemptDisplay(); // Update the display
       setTimeout(checkMatch, 500);
     }
   }
 }
 
 function checkMatch() {
+  attempts++;
+  document.getElementById("attempt-number").textContent = attempts;
+
   const [card1, card2] = flippedCards;
   const index1 = card1.dataset.index;
   const index2 = card2.dataset.index;
