@@ -20,15 +20,20 @@ body {
 
 h1 {
   text-align: center;
-  font-size: 1.1rem;
+  font-size: 2rem;
   margin: 3rem 0 0 0;
   color: #fff;
+}
+
+.heading-color {
+  color: #fcfc04;
 }
 
 .container {
   width: min(1200px, 100%);
   /* margin: auto; */
   display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
@@ -107,22 +112,29 @@ h1 {
   background-size: cover;
 }
 
-.game-features,
-.controls {
+.game-features {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  align-items: flex-start;
+  align-items: center;
+}
+
+.controls {
+  display: flex;
+  gap: 8px;
+  align-items: center;
 }
 
 button {
   margin: 0 5px;
-  padding: 8px 16px;
+  padding: 16px;
   font-size: 16px;
   cursor: pointer;
   border-radius: 8px;
-  border: 0;
-  width: 10em
+  border: 1px solid #fcfc04;
+  width: 8em;
+  background-color: transparent;
+  color: #fff;
 }
 
 @media (min-width: 1024px) {
